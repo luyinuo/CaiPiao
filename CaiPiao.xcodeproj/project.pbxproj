@@ -12,20 +12,35 @@
 		19298E70201ECCC500BB1B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E6E201ECCC500BB1B2B /* Main.storyboard */; };
 		19298E72201ECCC500BB1B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19298E71201ECCC500BB1B2B /* Assets.xcassets */; };
 		19298E75201ECCC500BB1B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E73201ECCC500BB1B2B /* LaunchScreen.storyboard */; };
+		19298E7E201ECCCD00BB1B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E6C201ECCC500BB1B2B /* ViewController.swift */; };
+		19298E7F201ECCCD00BB1B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E6A201ECCC500BB1B2B /* AppDelegate.swift */; };
+		19298E82201ECCCD00BB1B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E73201ECCC500BB1B2B /* LaunchScreen.storyboard */; };
+		19298E83201ECCCD00BB1B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19298E71201ECCC500BB1B2B /* Assets.xcassets */; };
+		19298E84201ECCCD00BB1B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E6E201ECCC500BB1B2B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19298E67201ECCC500BB1B2B /* CaiPiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaiPiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19298E67201ECCC500BB1B2B /* CaiPiao-One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaiPiao-One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19298E6A201ECCC500BB1B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19298E6C201ECCC500BB1B2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19298E6F201ECCC500BB1B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19298E71201ECCC500BB1B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19298E74201ECCC500BB1B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		19298E76201ECCC500BB1B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19298E76201ECCC500BB1B2B /* Info-One.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-One.plist"; sourceTree = "<group>"; };
+		19298E88201ECCCD00BB1B2B /* CaiPiao-Two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaiPiao-Two.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19298E89201ECCCD00BB1B2B /* Info-Two.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Two.plist"; path = "/Users/kevinlu/Documents/XCode-Project/CaiPiao/CaiPiao/Info-Two.plist"; sourceTree = "<absolute>"; };
+		19298E8A201F21FB00BB1B2B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		19298E64201ECCC500BB1B2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19298E80201ECCCD00BB1B2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,7 +61,8 @@
 		19298E68201ECCC500BB1B2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19298E67201ECCC500BB1B2B /* CaiPiao.app */,
+				19298E67201ECCC500BB1B2B /* CaiPiao-One.app */,
+				19298E88201ECCCD00BB1B2B /* CaiPiao-Two.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,7 +75,9 @@
 				19298E6E201ECCC500BB1B2B /* Main.storyboard */,
 				19298E71201ECCC500BB1B2B /* Assets.xcassets */,
 				19298E73201ECCC500BB1B2B /* LaunchScreen.storyboard */,
-				19298E76201ECCC500BB1B2B /* Info.plist */,
+				19298E76201ECCC500BB1B2B /* Info-One.plist */,
+				19298E89201ECCCD00BB1B2B /* Info-Two.plist */,
+				19298E8A201F21FB00BB1B2B /* PrefixHeader.pch */,
 			);
 			path = CaiPiao;
 			sourceTree = "<group>";
@@ -67,9 +85,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		19298E66201ECCC500BB1B2B /* CaiPiao */ = {
+		19298E66201ECCC500BB1B2B /* CaiPiao-One */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19298E79201ECCC500BB1B2B /* Build configuration list for PBXNativeTarget "CaiPiao" */;
+			buildConfigurationList = 19298E79201ECCC500BB1B2B /* Build configuration list for PBXNativeTarget "CaiPiao-One" */;
 			buildPhases = (
 				19298E63201ECCC500BB1B2B /* Sources */,
 				19298E64201ECCC500BB1B2B /* Frameworks */,
@@ -79,9 +97,26 @@
 			);
 			dependencies = (
 			);
-			name = CaiPiao;
+			name = "CaiPiao-One";
 			productName = CaiPiao;
-			productReference = 19298E67201ECCC500BB1B2B /* CaiPiao.app */;
+			productReference = 19298E67201ECCC500BB1B2B /* CaiPiao-One.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19298E7C201ECCCD00BB1B2B /* CaiPiao-Two */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19298E85201ECCCD00BB1B2B /* Build configuration list for PBXNativeTarget "CaiPiao-Two" */;
+			buildPhases = (
+				19298E7D201ECCCD00BB1B2B /* Sources */,
+				19298E80201ECCCD00BB1B2B /* Frameworks */,
+				19298E81201ECCCD00BB1B2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CaiPiao-Two";
+			productName = CaiPiao;
+			productReference = 19298E88201ECCCD00BB1B2B /* CaiPiao-Two.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -96,6 +131,9 @@
 				TargetAttributes = {
 					19298E66201ECCC500BB1B2B = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					19298E7C201ECCCD00BB1B2B = {
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -113,7 +151,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19298E66201ECCC500BB1B2B /* CaiPiao */,
+				19298E66201ECCC500BB1B2B /* CaiPiao-One */,
+				19298E7C201ECCCD00BB1B2B /* CaiPiao-Two */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +168,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19298E81201ECCCD00BB1B2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19298E82201ECCCD00BB1B2B /* LaunchScreen.storyboard in Resources */,
+				19298E83201ECCCD00BB1B2B /* Assets.xcassets in Resources */,
+				19298E84201ECCCD00BB1B2B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,6 +187,15 @@
 			files = (
 				19298E6D201ECCC500BB1B2B /* ViewController.swift in Sources */,
 				19298E6B201ECCC500BB1B2B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19298E7D201ECCCD00BB1B2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19298E7E201ECCCD00BB1B2B /* ViewController.swift in Sources */,
+				19298E7F201ECCCD00BB1B2B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,8 +260,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"Environment_Mode=1",
 					"DEBUG=1",
-					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -256,6 +314,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "Environment_Mode=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -276,10 +335,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D79F7E5CDG;
-				INFOPLIST_FILE = CaiPiao/Info.plist;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				INFOPLIST_FILE = "CaiPiao/Info-One.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Environment_Mode;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -291,7 +354,48 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D79F7E5CDG;
-				INFOPLIST_FILE = CaiPiao/Info.plist;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "CaiPiao/Info-One.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiao;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Environment_Mode;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19298E86201ECCCD00BB1B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D79F7E5CDG;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"Environment_Mode=2",
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = "CaiPiao/Info-Two.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiao;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19298E87201ECCCD00BB1B2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D79F7E5CDG;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "Environment_Mode=2";
+				INFOPLIST_FILE = "CaiPiao/Info-Two.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,11 +416,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19298E79201ECCC500BB1B2B /* Build configuration list for PBXNativeTarget "CaiPiao" */ = {
+		19298E79201ECCC500BB1B2B /* Build configuration list for PBXNativeTarget "CaiPiao-One" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19298E7A201ECCC500BB1B2B /* Debug */,
 				19298E7B201ECCC500BB1B2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19298E85201ECCCD00BB1B2B /* Build configuration list for PBXNativeTarget "CaiPiao-Two" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19298E86201ECCCD00BB1B2B /* Debug */,
+				19298E87201ECCCD00BB1B2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
