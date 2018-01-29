@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "19298E7C201ECCCD00BB1B2B"
-               BuildableName = "CaiPiao copy.app"
-               BlueprintName = "CaiPiao copy"
+               BuildableName = "CaiPiao-Two.app"
+               BlueprintName = "CaiPiao-Two"
                ReferencedContainer = "container:CaiPiao.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19298E7C201ECCCD00BB1B2B"
-            BuildableName = "CaiPiao copy.app"
-            BlueprintName = "CaiPiao copy"
+            BuildableName = "CaiPiao-Two.app"
+            BlueprintName = "CaiPiao-Two"
             ReferencedContainer = "container:CaiPiao.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -58,8 +58,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19298E7C201ECCCD00BB1B2B"
-            BuildableName = "CaiPiao copy.app"
-            BlueprintName = "CaiPiao copy"
+            BuildableName = "CaiPiao-Two.app"
+            BlueprintName = "CaiPiao-Two"
             ReferencedContainer = "container:CaiPiao.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19298E7C201ECCCD00BB1B2B"
-            BuildableName = "CaiPiao copy.app"
-            BlueprintName = "CaiPiao copy"
+            BuildableName = "CaiPiao-Two.app"
+            BlueprintName = "CaiPiao-Two"
             ReferencedContainer = "container:CaiPiao.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
