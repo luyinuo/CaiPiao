@@ -8,17 +8,20 @@
 
 import UIKit
 import Moya
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NSLog("\(SERVER_URL)")
-        self.fetchData(playtype: 1039, lottype: 1001, success: nil)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
 }
 
 extension UIViewController {
