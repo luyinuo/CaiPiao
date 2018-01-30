@@ -8,8 +8,9 @@ use_frameworks!
    pod 'SwiftyJSON’
    pod 'Kingfisher'
    pod 'SnapKit'
-   pod 'HandyJSON', '~> 1.7.1'
-   pod 'Moya/RxSwift'
+   pod 'HandyJSON', '~> 4.0.0-beta.1'
+   pod 'Moya/RxSwift', '~> 10.0.0'
+   pod 'ObjectMapper'
 end
 
 target 'CaiPiao-Two' do
@@ -18,6 +19,7 @@ use_frameworks!
    pod 'SwiftyJSON’
    pod 'Kingfisher'
    pod 'SnapKit'
-   pod 'HandyJSON', '~> 1.7.1'
+   pod 'HandyJSON', '~> 4.0.0-beta.1'
    pod 'Moya/RxSwift'
+   pod 'ObjectMapper'
 end

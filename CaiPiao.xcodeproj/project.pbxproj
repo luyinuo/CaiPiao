@@ -8,15 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		19298E6B201ECCC500BB1B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E6A201ECCC500BB1B2B /* AppDelegate.swift */; };
-		19298E6D201ECCC500BB1B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E6C201ECCC500BB1B2B /* ViewController.swift */; };
-		19298E70201ECCC500BB1B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E6E201ECCC500BB1B2B /* Main.storyboard */; };
 		19298E72201ECCC500BB1B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19298E71201ECCC500BB1B2B /* Assets.xcassets */; };
-		19298E75201ECCC500BB1B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E73201ECCC500BB1B2B /* LaunchScreen.storyboard */; };
-		19298E7E201ECCCD00BB1B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E6C201ECCC500BB1B2B /* ViewController.swift */; };
 		19298E7F201ECCCD00BB1B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E6A201ECCC500BB1B2B /* AppDelegate.swift */; };
-		19298E82201ECCCD00BB1B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E73201ECCC500BB1B2B /* LaunchScreen.storyboard */; };
 		19298E83201ECCCD00BB1B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19298E71201ECCC500BB1B2B /* Assets.xcassets */; };
-		19298E84201ECCCD00BB1B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E6E201ECCC500BB1B2B /* Main.storyboard */; };
+		19298E8D20204C1500BB1B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E8C20204C1500BB1B2B /* ViewController.swift */; };
+		19298E9320204C6800BB1B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E8F20204C6800BB1B2B /* LaunchScreen.storyboard */; };
+		19298E9420204C6800BB1B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E9120204C6800BB1B2B /* Main.storyboard */; };
+		19298E9D20204E0000BB1B2B /* TwoMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E9C20204E0000BB1B2B /* TwoMain.storyboard */; };
+		19298E9F20204E1200BB1B2B /* TwoLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19298E9E20204E1200BB1B2B /* TwoLaunch.storyboard */; };
+		19298EA1202069E400BB1B2B /* MVHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EA0202069E400BB1B2B /* MVHttpService.swift */; };
+		19298EA22020793000BB1B2B /* MVHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EA0202069E400BB1B2B /* MVHttpService.swift */; };
+		19298EA4202082A500BB1B2B /* CPBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EA3202082A500BB1B2B /* CPBaseModel.swift */; };
+		19298EA6202083A000BB1B2B /* CPPreCalcListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EA5202083A000BB1B2B /* CPPreCalcListModel.swift */; };
+		19298EB2202085F800BB1B2B /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EA8202085F700BB1B2B /* ArrayExtension.swift */; };
+		19298EB3202085F800BB1B2B /* ConversionToModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EA9202085F700BB1B2B /* ConversionToModelExtension.swift */; };
+		19298EB4202085F800BB1B2B /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EAA202085F700BB1B2B /* DictionaryExtension.swift */; };
+		19298EB6202085F800BB1B2B /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EAC202085F700BB1B2B /* NSDate+Extension.swift */; };
+		19298EB8202085F800BB1B2B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EAE202085F700BB1B2B /* UITableView+Extension.swift */; };
+		19298EB9202085F800BB1B2B /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EAF202085F700BB1B2B /* UIView+extension.swift */; };
+		19298EBA202085F800BB1B2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EB0202085F700BB1B2B /* UIViewControllerExtension.swift */; };
+		19298EBB202085F800BB1B2B /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EB1202085F700BB1B2B /* UIWindowExtension.swift */; };
 		2D82395280EFFDCFD2933DF8 /* Pods_CaiPiao_Two.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30C623BB71FE3E9298C768F /* Pods_CaiPiao_Two.framework */; };
 		5181932B5688B5922FF550C8 /* Pods_CaiPiao_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B2EAAB914691067B7355B2 /* Pods_CaiPiao_One.framework */; };
 /* End PBXBuildFile section */
@@ -25,14 +36,27 @@
 		16D655400A37CD5DFDCC4F87 /* Pods-CaiPiao-One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaiPiao-One.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaiPiao-One/Pods-CaiPiao-One.debug.xcconfig"; sourceTree = "<group>"; };
 		19298E67201ECCC500BB1B2B /* CaiPiao-One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaiPiao-One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19298E6A201ECCC500BB1B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19298E6C201ECCC500BB1B2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		19298E6F201ECCC500BB1B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19298E71201ECCC500BB1B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		19298E74201ECCC500BB1B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19298E76201ECCC500BB1B2B /* Info-One.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-One.plist"; sourceTree = "<group>"; };
 		19298E88201ECCCD00BB1B2B /* CaiPiao-Two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaiPiao-Two.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19298E89201ECCCD00BB1B2B /* Info-Two.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Two.plist"; path = "/Users/kevinlu/Documents/XCode-Project/CaiPiao/CaiPiao/Info-Two.plist"; sourceTree = "<absolute>"; };
 		19298E8A201F21FB00BB1B2B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		19298E8C20204C1500BB1B2B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19298E9020204C6800BB1B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19298E9220204C6800BB1B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		19298E9C20204E0000BB1B2B /* TwoMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwoMain.storyboard; sourceTree = "<group>"; };
+		19298E9E20204E1200BB1B2B /* TwoLaunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TwoLaunch.storyboard; sourceTree = "<group>"; };
+		19298EA0202069E400BB1B2B /* MVHttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVHttpService.swift; sourceTree = "<group>"; };
+		19298EA3202082A500BB1B2B /* CPBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPBaseModel.swift; sourceTree = "<group>"; };
+		19298EA5202083A000BB1B2B /* CPPreCalcListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPreCalcListModel.swift; sourceTree = "<group>"; };
+		19298EA8202085F700BB1B2B /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		19298EA9202085F700BB1B2B /* ConversionToModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionToModelExtension.swift; sourceTree = "<group>"; };
+		19298EAA202085F700BB1B2B /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		19298EAC202085F700BB1B2B /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		19298EAE202085F700BB1B2B /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		19298EAF202085F700BB1B2B /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		19298EB0202085F700BB1B2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		19298EB1202085F700BB1B2B /* UIWindowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
 		42D586B2BAB3979D6B1F28F6 /* Pods-CaiPiao-Two.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaiPiao-Two.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaiPiao-Two/Pods-CaiPiao-Two.release.xcconfig"; sourceTree = "<group>"; };
 		67C45E5077EBE7912278D337 /* Pods-CaiPiao-Two.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaiPiao-Two.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaiPiao-Two/Pods-CaiPiao-Two.debug.xcconfig"; sourceTree = "<group>"; };
 		992D5B67255B88365227FE06 /* Pods-CaiPiao-One.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaiPiao-One.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaiPiao-One/Pods-CaiPiao-One.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,16 +106,53 @@
 		19298E69201ECCC500BB1B2B /* CaiPiao */ = {
 			isa = PBXGroup;
 			children = (
+				19298EA7202085F700BB1B2B /* Extension */,
+				19298E9520204CFA00BB1B2B /* CaiPiaoTwo */,
+				19298E8B20204C1500BB1B2B /* CaiPiaoOne */,
 				19298E6A201ECCC500BB1B2B /* AppDelegate.swift */,
-				19298E6C201ECCC500BB1B2B /* ViewController.swift */,
-				19298E6E201ECCC500BB1B2B /* Main.storyboard */,
+				19298EA0202069E400BB1B2B /* MVHttpService.swift */,
 				19298E71201ECCC500BB1B2B /* Assets.xcassets */,
-				19298E73201ECCC500BB1B2B /* LaunchScreen.storyboard */,
 				19298E76201ECCC500BB1B2B /* Info-One.plist */,
 				19298E89201ECCCD00BB1B2B /* Info-Two.plist */,
 				19298E8A201F21FB00BB1B2B /* PrefixHeader.pch */,
 			);
 			path = CaiPiao;
+			sourceTree = "<group>";
+		};
+		19298E8B20204C1500BB1B2B /* CaiPiaoOne */ = {
+			isa = PBXGroup;
+			children = (
+				19298E8F20204C6800BB1B2B /* LaunchScreen.storyboard */,
+				19298E9120204C6800BB1B2B /* Main.storyboard */,
+				19298E8C20204C1500BB1B2B /* ViewController.swift */,
+				19298EA3202082A500BB1B2B /* CPBaseModel.swift */,
+				19298EA5202083A000BB1B2B /* CPPreCalcListModel.swift */,
+			);
+			path = CaiPiaoOne;
+			sourceTree = "<group>";
+		};
+		19298E9520204CFA00BB1B2B /* CaiPiaoTwo */ = {
+			isa = PBXGroup;
+			children = (
+				19298E9C20204E0000BB1B2B /* TwoMain.storyboard */,
+				19298E9E20204E1200BB1B2B /* TwoLaunch.storyboard */,
+			);
+			path = CaiPiaoTwo;
+			sourceTree = "<group>";
+		};
+		19298EA7202085F700BB1B2B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				19298EA8202085F700BB1B2B /* ArrayExtension.swift */,
+				19298EA9202085F700BB1B2B /* ConversionToModelExtension.swift */,
+				19298EAA202085F700BB1B2B /* DictionaryExtension.swift */,
+				19298EAC202085F700BB1B2B /* NSDate+Extension.swift */,
+				19298EAE202085F700BB1B2B /* UITableView+Extension.swift */,
+				19298EAF202085F700BB1B2B /* UIView+extension.swift */,
+				19298EB0202085F700BB1B2B /* UIViewControllerExtension.swift */,
+				19298EB1202085F700BB1B2B /* UIWindowExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		1A917134EC220BCC3B579D06 /* Pods */ = {
@@ -200,9 +261,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19298E75201ECCC500BB1B2B /* LaunchScreen.storyboard in Resources */,
+				19298E9420204C6800BB1B2B /* Main.storyboard in Resources */,
 				19298E72201ECCC500BB1B2B /* Assets.xcassets in Resources */,
-				19298E70201ECCC500BB1B2B /* Main.storyboard in Resources */,
+				19298E9320204C6800BB1B2B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,9 +271,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19298E82201ECCCD00BB1B2B /* LaunchScreen.storyboard in Resources */,
+				19298E9D20204E0000BB1B2B /* TwoMain.storyboard in Resources */,
+				19298E9F20204E1200BB1B2B /* TwoLaunch.storyboard in Resources */,
 				19298E83201ECCCD00BB1B2B /* Assets.xcassets in Resources */,
-				19298E84201ECCCD00BB1B2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,8 +377,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19298E6D201ECCC500BB1B2B /* ViewController.swift in Sources */,
+				19298EA6202083A000BB1B2B /* CPPreCalcListModel.swift in Sources */,
+				19298E8D20204C1500BB1B2B /* ViewController.swift in Sources */,
+				19298EA1202069E400BB1B2B /* MVHttpService.swift in Sources */,
+				19298EB9202085F800BB1B2B /* UIView+extension.swift in Sources */,
+				19298EB6202085F800BB1B2B /* NSDate+Extension.swift in Sources */,
+				19298EBB202085F800BB1B2B /* UIWindowExtension.swift in Sources */,
+				19298EB2202085F800BB1B2B /* ArrayExtension.swift in Sources */,
 				19298E6B201ECCC500BB1B2B /* AppDelegate.swift in Sources */,
+				19298EB3202085F800BB1B2B /* ConversionToModelExtension.swift in Sources */,
+				19298EA4202082A500BB1B2B /* CPBaseModel.swift in Sources */,
+				19298EB4202085F800BB1B2B /* DictionaryExtension.swift in Sources */,
+				19298EBA202085F800BB1B2B /* UIViewControllerExtension.swift in Sources */,
+				19298EB8202085F800BB1B2B /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19298E7E201ECCCD00BB1B2B /* ViewController.swift in Sources */,
+				19298EA22020793000BB1B2B /* MVHttpService.swift in Sources */,
 				19298E7F201ECCCD00BB1B2B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,20 +405,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		19298E6E201ECCC500BB1B2B /* Main.storyboard */ = {
+		19298E8F20204C6800BB1B2B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				19298E6F201ECCC500BB1B2B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		19298E73201ECCC500BB1B2B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19298E74201ECCC500BB1B2B /* Base */,
+				19298E9020204C6800BB1B2B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		19298E9120204C6800BB1B2B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19298E9220204C6800BB1B2B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -470,6 +542,7 @@
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				INFOPLIST_FILE = "CaiPiao/Info-One.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiao;
@@ -490,6 +563,7 @@
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "CaiPiao/Info-One.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiao;
@@ -513,8 +587,9 @@
 					"DEBUG=1",
 				);
 				INFOPLIST_FILE = "CaiPiao/Info-Two.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiaoTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -531,8 +606,9 @@
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "Environment_Mode=2";
 				INFOPLIST_FILE = "CaiPiao/Info-Two.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.otvcloud.CaiPiaoTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
