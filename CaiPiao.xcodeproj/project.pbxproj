@@ -28,6 +28,10 @@
 		19298EB9202085F800BB1B2B /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EAF202085F700BB1B2B /* UIView+extension.swift */; };
 		19298EBA202085F800BB1B2B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EB0202085F700BB1B2B /* UIViewControllerExtension.swift */; };
 		19298EBB202085F800BB1B2B /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EB1202085F700BB1B2B /* UIWindowExtension.swift */; };
+		19298EBD2021B57700BB1B2B /* CPCommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EBC2021B57700BB1B2B /* CPCommonUtil.swift */; };
+		19298EBE2021B57800BB1B2B /* CPCommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EBC2021B57700BB1B2B /* CPCommonUtil.swift */; };
+		19298EC02021C81200BB1B2B /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = 19298EBF2021C81200BB1B2B /* news.json */; };
+		19298EC12021C81200BB1B2B /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = 19298EBF2021C81200BB1B2B /* news.json */; };
 		2D82395280EFFDCFD2933DF8 /* Pods_CaiPiao_Two.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30C623BB71FE3E9298C768F /* Pods_CaiPiao_Two.framework */; };
 		5181932B5688B5922FF550C8 /* Pods_CaiPiao_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B2EAAB914691067B7355B2 /* Pods_CaiPiao_One.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +61,8 @@
 		19298EAF202085F700BB1B2B /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		19298EB0202085F700BB1B2B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		19298EB1202085F700BB1B2B /* UIWindowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
+		19298EBC2021B57700BB1B2B /* CPCommonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPCommonUtil.swift; sourceTree = "<group>"; };
+		19298EBF2021C81200BB1B2B /* news.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = news.json; sourceTree = "<group>"; };
 		42D586B2BAB3979D6B1F28F6 /* Pods-CaiPiao-Two.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaiPiao-Two.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaiPiao-Two/Pods-CaiPiao-Two.release.xcconfig"; sourceTree = "<group>"; };
 		67C45E5077EBE7912278D337 /* Pods-CaiPiao-Two.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaiPiao-Two.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaiPiao-Two/Pods-CaiPiao-Two.debug.xcconfig"; sourceTree = "<group>"; };
 		992D5B67255B88365227FE06 /* Pods-CaiPiao-One.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaiPiao-One.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaiPiao-One/Pods-CaiPiao-One.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 				19298E76201ECCC500BB1B2B /* Info-One.plist */,
 				19298E89201ECCCD00BB1B2B /* Info-Two.plist */,
 				19298E8A201F21FB00BB1B2B /* PrefixHeader.pch */,
+				19298EBC2021B57700BB1B2B /* CPCommonUtil.swift */,
 			);
 			path = CaiPiao;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 				19298E8C20204C1500BB1B2B /* ViewController.swift */,
 				19298EA3202082A500BB1B2B /* CPBaseModel.swift */,
 				19298EA5202083A000BB1B2B /* CPPreCalcListModel.swift */,
+				19298EBF2021C81200BB1B2B /* news.json */,
 			);
 			path = CaiPiaoOne;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 			files = (
 				19298E9420204C6800BB1B2B /* Main.storyboard in Resources */,
 				19298E72201ECCC500BB1B2B /* Assets.xcassets in Resources */,
+				19298EC02021C81200BB1B2B /* news.json in Resources */,
 				19298E9320204C6800BB1B2B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +282,7 @@
 			files = (
 				19298E9D20204E0000BB1B2B /* TwoMain.storyboard in Resources */,
 				19298E9F20204E1200BB1B2B /* TwoLaunch.storyboard in Resources */,
+				19298EC12021C81200BB1B2B /* news.json in Resources */,
 				19298E83201ECCCD00BB1B2B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +396,7 @@
 				19298EB2202085F800BB1B2B /* ArrayExtension.swift in Sources */,
 				19298E6B201ECCC500BB1B2B /* AppDelegate.swift in Sources */,
 				19298EB3202085F800BB1B2B /* ConversionToModelExtension.swift in Sources */,
+				19298EBD2021B57700BB1B2B /* CPCommonUtil.swift in Sources */,
 				19298EA4202082A500BB1B2B /* CPBaseModel.swift in Sources */,
 				19298EB4202085F800BB1B2B /* DictionaryExtension.swift in Sources */,
 				19298EBA202085F800BB1B2B /* UIViewControllerExtension.swift in Sources */,
@@ -398,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19298EA22020793000BB1B2B /* MVHttpService.swift in Sources */,
+				19298EBE2021B57800BB1B2B /* CPCommonUtil.swift in Sources */,
 				19298E7F201ECCCD00BB1B2B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
