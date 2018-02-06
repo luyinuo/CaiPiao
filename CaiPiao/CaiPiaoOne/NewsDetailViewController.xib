@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="CaiPiao_One" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="kGd-mT-joQ" id="7cR-aH-O6t"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGd-mT-joQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUz-4W-G5Y">
+                    <rect key="frame" x="0.0" y="0.0" width="82" height="84"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="84" id="nif-9u-esa"/>
+                        <constraint firstAttribute="width" constant="82" id="r0U-p1-Gmy"/>
+                    </constraints>
+                    <connections>
+                        <action selector="clickReturnBtn:" destination="-1" eventType="touchUpInside" id="onC-t2-9tv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kGd-mT-joQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0Dz-pa-vum"/>
+                <constraint firstItem="ZUz-4W-G5Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4XU-X3-nUP"/>
+                <constraint firstAttribute="bottom" secondItem="kGd-mT-joQ" secondAttribute="bottom" id="Dqf-Vi-tQP"/>
+                <constraint firstItem="ZUz-4W-G5Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="G1f-aU-Inw"/>
+                <constraint firstItem="kGd-mT-joQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nQ6-5b-dT5"/>
+                <constraint firstAttribute="trailing" secondItem="kGd-mT-joQ" secondAttribute="trailing" id="vqh-ah-u1U"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="62.5"/>
+        </view>
+    </objects>
+</document>
