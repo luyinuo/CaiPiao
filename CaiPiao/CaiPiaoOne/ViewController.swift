@@ -27,6 +27,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.fetchNews()
     }
     
+    @IBAction func clickBtn(_ sender: UIButton) {
+        
+    }
+    func performSegue(withIdentifier identifier: String, sender: UIButton?) {
+        super.performSegue(withIdentifier: identifier, sender: sender)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

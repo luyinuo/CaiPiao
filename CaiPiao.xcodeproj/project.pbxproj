@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19128894202DA24A005DB119 /* CPKJDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19128893202DA249005DB119 /* CPKJDetailViewController.swift */; };
+		19128896202DA32C005DB119 /* CPKJHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19128895202DA32C005DB119 /* CPKJHeaderView.swift */; };
+		19128898202DAA23005DB119 /* CPKJTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19128897202DAA23005DB119 /* CPKJTableViewCell.swift */; };
 		19298E6B201ECCC500BB1B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E6A201ECCC500BB1B2B /* AppDelegate.swift */; };
 		19298E72201ECCC500BB1B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19298E71201ECCC500BB1B2B /* Assets.xcassets */; };
 		19298E7F201ECCCD00BB1B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298E6A201ECCC500BB1B2B /* AppDelegate.swift */; };
@@ -43,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		16D655400A37CD5DFDCC4F87 /* Pods-CaiPiao-One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaiPiao-One.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaiPiao-One/Pods-CaiPiao-One.debug.xcconfig"; sourceTree = "<group>"; };
+		19128893202DA249005DB119 /* CPKJDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPKJDetailViewController.swift; sourceTree = "<group>"; };
+		19128895202DA32C005DB119 /* CPKJHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPKJHeaderView.swift; sourceTree = "<group>"; };
+		19128897202DAA23005DB119 /* CPKJTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPKJTableViewCell.swift; sourceTree = "<group>"; };
 		19298E67201ECCC500BB1B2B /* CaiPiao-One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaiPiao-One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19298E6A201ECCC500BB1B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19298E71201ECCC500BB1B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 				3CB400962029EC1A0091010E /* NewsTableViewCell.xib */,
 				3CB400992029F8B70091010E /* NewsDetailViewController.swift */,
 				3CB4009A2029F8B70091010E /* NewsDetailViewController.xib */,
+				19128895202DA32C005DB119 /* CPKJHeaderView.swift */,
+				19128897202DAA23005DB119 /* CPKJTableViewCell.swift */,
+				19128893202DA249005DB119 /* CPKJDetailViewController.swift */,
 			);
 			path = CaiPiaoOne;
 			sourceTree = "<group>";
@@ -408,6 +417,7 @@
 				3CB4009B2029F8B70091010E /* NewsDetailViewController.swift in Sources */,
 				19298E8D20204C1500BB1B2B /* ViewController.swift in Sources */,
 				3CB400972029EC1A0091010E /* NewsTableViewCell.swift in Sources */,
+				19128896202DA32C005DB119 /* CPKJHeaderView.swift in Sources */,
 				19298EA1202069E400BB1B2B /* MVHttpService.swift in Sources */,
 				19298EB9202085F800BB1B2B /* UIView+extension.swift in Sources */,
 				19298EB6202085F800BB1B2B /* NSDate+Extension.swift in Sources */,
@@ -420,7 +430,9 @@
 				19298EA4202082A500BB1B2B /* CPBaseModel.swift in Sources */,
 				19298EB4202085F800BB1B2B /* DictionaryExtension.swift in Sources */,
 				19298EBA202085F800BB1B2B /* UIViewControllerExtension.swift in Sources */,
+				19128898202DAA23005DB119 /* CPKJTableViewCell.swift in Sources */,
 				19298EB8202085F800BB1B2B /* UITableView+Extension.swift in Sources */,
+				19128894202DA24A005DB119 /* CPKJDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
