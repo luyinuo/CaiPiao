@@ -35,6 +35,11 @@
 		19298EBE2021B57800BB1B2B /* CPCommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19298EBC2021B57700BB1B2B /* CPCommonUtil.swift */; };
 		19298EC02021C81200BB1B2B /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = 19298EBF2021C81200BB1B2B /* news.json */; };
 		19298EC12021C81200BB1B2B /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = 19298EBF2021C81200BB1B2B /* news.json */; };
+		195ECF712065050700AFAF88 /* ZiXunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195ECF702065050700AFAF88 /* ZiXunViewController.swift */; };
+		195ECF73206507D500AFAF88 /* CPZiXunListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195ECF72206507D500AFAF88 /* CPZiXunListModel.swift */; };
+		195ECF762065096600AFAF88 /* CPZiXunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195ECF742065096600AFAF88 /* CPZiXunTableViewCell.swift */; };
+		195ECF772065096600AFAF88 /* CPZiXunTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195ECF752065096600AFAF88 /* CPZiXunTableViewCell.xib */; };
+		195ECF792065112200AFAF88 /* CPTrendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195ECF782065112200AFAF88 /* CPTrendTableViewController.swift */; };
 		2D82395280EFFDCFD2933DF8 /* Pods_CaiPiao_Two.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30C623BB71FE3E9298C768F /* Pods_CaiPiao_Two.framework */; };
 		3CB400942022CB520091010E /* CPNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB400932022CB520091010E /* CPNewsModel.swift */; };
 		3CB400972029EC1A0091010E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB400952029EC1A0091010E /* NewsTableViewCell.swift */; };
@@ -74,6 +79,11 @@
 		19298EB1202085F700BB1B2B /* UIWindowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
 		19298EBC2021B57700BB1B2B /* CPCommonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPCommonUtil.swift; sourceTree = "<group>"; };
 		19298EBF2021C81200BB1B2B /* news.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = news.json; sourceTree = "<group>"; };
+		195ECF702065050700AFAF88 /* ZiXunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiXunViewController.swift; sourceTree = "<group>"; };
+		195ECF72206507D500AFAF88 /* CPZiXunListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPZiXunListModel.swift; sourceTree = "<group>"; };
+		195ECF742065096600AFAF88 /* CPZiXunTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPZiXunTableViewCell.swift; sourceTree = "<group>"; };
+		195ECF752065096600AFAF88 /* CPZiXunTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CPZiXunTableViewCell.xib; sourceTree = "<group>"; };
+		195ECF782065112200AFAF88 /* CPTrendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTrendTableViewController.swift; sourceTree = "<group>"; };
 		3CB400932022CB520091010E /* CPNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPNewsModel.swift; sourceTree = "<group>"; };
 		3CB400952029EC1A0091010E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		3CB400962029EC1A0091010E /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -159,6 +169,11 @@
 				19128895202DA32C005DB119 /* CPKJHeaderView.swift */,
 				19128897202DAA23005DB119 /* CPKJTableViewCell.swift */,
 				19128893202DA249005DB119 /* CPKJDetailViewController.swift */,
+				195ECF702065050700AFAF88 /* ZiXunViewController.swift */,
+				195ECF72206507D500AFAF88 /* CPZiXunListModel.swift */,
+				195ECF742065096600AFAF88 /* CPZiXunTableViewCell.swift */,
+				195ECF752065096600AFAF88 /* CPZiXunTableViewCell.xib */,
+				195ECF782065112200AFAF88 /* CPTrendTableViewController.swift */,
 			);
 			path = CaiPiaoOne;
 			sourceTree = "<group>";
@@ -298,6 +313,7 @@
 				19298E72201ECCC500BB1B2B /* Assets.xcassets in Resources */,
 				19298EC02021C81200BB1B2B /* news.json in Resources */,
 				19298E9320204C6800BB1B2B /* LaunchScreen.storyboard in Resources */,
+				195ECF772065096600AFAF88 /* CPZiXunTableViewCell.xib in Resources */,
 				3CB400982029EC1A0091010E /* NewsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19298EA6202083A000BB1B2B /* CPPreCalcListModel.swift in Sources */,
+				195ECF73206507D500AFAF88 /* CPZiXunListModel.swift in Sources */,
 				3CB4009B2029F8B70091010E /* NewsDetailViewController.swift in Sources */,
 				19298E8D20204C1500BB1B2B /* ViewController.swift in Sources */,
 				3CB400972029EC1A0091010E /* NewsTableViewCell.swift in Sources */,
@@ -424,12 +441,15 @@
 				19298EBB202085F800BB1B2B /* UIWindowExtension.swift in Sources */,
 				19298EB2202085F800BB1B2B /* ArrayExtension.swift in Sources */,
 				19298E6B201ECCC500BB1B2B /* AppDelegate.swift in Sources */,
+				195ECF792065112200AFAF88 /* CPTrendTableViewController.swift in Sources */,
 				19298EB3202085F800BB1B2B /* ConversionToModelExtension.swift in Sources */,
+				195ECF712065050700AFAF88 /* ZiXunViewController.swift in Sources */,
 				3CB400942022CB520091010E /* CPNewsModel.swift in Sources */,
 				19298EBD2021B57700BB1B2B /* CPCommonUtil.swift in Sources */,
 				19298EA4202082A500BB1B2B /* CPBaseModel.swift in Sources */,
 				19298EB4202085F800BB1B2B /* DictionaryExtension.swift in Sources */,
 				19298EBA202085F800BB1B2B /* UIViewControllerExtension.swift in Sources */,
+				195ECF762065096600AFAF88 /* CPZiXunTableViewCell.swift in Sources */,
 				19128898202DAA23005DB119 /* CPKJTableViewCell.swift in Sources */,
 				19298EB8202085F800BB1B2B /* UITableView+Extension.swift in Sources */,
 				19128894202DA24A005DB119 /* CPKJDetailViewController.swift in Sources */,

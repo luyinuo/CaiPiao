@@ -11,17 +11,29 @@ import UIKit
 class NewsDetailViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
     var newsId:String = ""
-
+    var urlStr:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = "https://h5.jdd.com/communal/news/detail?id=\(newsId)"//100058326
+        var url = ""
+        if !newsId.isEmpty {
+            url = "https://h5.jdd.com/communal/news/detail?id=\(newsId)"//100058326
+        }
+        if !urlStr.isEmpty {
+            url = urlStr
+        }
+        
         let request = NSURLRequest(url:URL(string:url)!)
         self.webView.delegate = self
         self.webView.loadRequest(request as URLRequest)
     }
 
     @IBAction func clickReturnBtn(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        if let _ = self.navigationController {
+            self.navigationController?.popViewController(animated: true)
+        }else{
+            self.dismiss(animated: true, completion: nil)
+        }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import Moya
+
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var newsDataList:NSMutableArray = NSMutableArray()
+    let dataSource = [[1001,1039,"双色球"],[1002,1038,"福彩3D"],[1003,1039,"七乐彩"],[1004,1055,"七星彩"],[1005,1038,"排列三"],[1006,1050,"排列五"],[1007,1039,"大乐透"]]
     override func viewDidLoad() {
         super.viewDidLoad()
         NSLog("\(SERVER_URL)")
@@ -24,15 +25,30 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         self.tableView.tableHeaderView?.height = headerViewHeight;
         self.tableView.register(UINib.init(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
+        self.tableView.tableFooterView = UIView()
         self.fetchNews()
     }
     
     @IBAction func clickBtn(_ sender: UIButton) {
-        
+        self.performSegue(withIdentifier: "detailIdentify", sender: sender)
     }
-    func performSegue(withIdentifier identifier: String, sender: UIButton?) {
-        super.performSegue(withIdentifier: identifier, sender: sender)
-        
+    
+    @IBAction func gotoNews(_ sender: Any) {
+        let zixunVC = ZiXunViewController()
+        zixunVC.title = "最新资讯"
+        self.navigationController?.pushViewController(zixunVC, animated: true)
+    }
+    @IBAction func gotoTrend(_ sender: Any) {
+        let trendVc = CPTrendTableViewController()
+        self.navigationController?.pushViewController(trendVc, animated: true)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let btn = sender as! UIView
+        let destinationVC = segue.destination as! CPKJDetailViewController
+        destinationVC.lottype = (self.dataSource[btn.tag] as [Any]) [0] as! Int
+        destinationVC.playtype = (self.dataSource[btn.tag] as [Any]) [1] as! Int
+        destinationVC.title = (self.dataSource[btn.tag] as [Any]) [2] as? String
+        super.prepare(for: segue, sender: sender)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,24 +79,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 }
 
 extension ViewController {
-    func fetchData(playtype:Int,lottype:Int,success:(()->())?) {
-        let provider = MoyaProvider<MVHttpService>()
-        provider.request(.getPrecalc(playtype: 1039, lottype: 1001)) { (result) in
-            switch result {
-            case let .success(response):
-                do {
-                    let filtResponse = try response.filterSuccessfulStatusCodes()
-                    
-                    let result = filtResponse.mapModel(CPPreCalcListModel.self)
-                    NSLog("\(result.list)")
-                }catch{
-                    debugPrint("request error")
-                }
-            case let .failure(error):
-                print("请求失败"+error.localizedDescription)
-            }
-        }
-    }
+    
     func fetchNews (){
         
         let path = Bundle.main.path(forResource:"news", ofType: "json")

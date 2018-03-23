@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 /**
  双色球：
  http://115.29.175.83/cpyc/getprecalc.php?lastid=-1&playtype=1039&lottype=1001&issuenum=30
@@ -18,40 +19,62 @@ import UIKit
  */
 class CPKJDetailViewController: UITableViewController {
     @IBOutlet weak var headerView: CPKJHeaderView!
+    var playtype: Int!
+    var lottype: Int!
+    var resultModel:CPPreCalcListModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView.serialLabel?.text = "17期"
+        self.tableView.tableFooterView = UIView()
+        fetchData(playtype: playtype, lottype: lottype)
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return resultModel?.list.count ?? 0
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cpkjCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cpkjCell", for: indexPath) as! CPKJTableViewCell
+        let model = self.resultModel?.list[indexPath.row]
+        cell.model = model
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 108
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension CPKJDetailViewController {
+    public func fetchData(playtype:Int,lottype:Int) {
+        let provider = MoyaProvider<MVHttpService>()
+        provider.request(.getPrecalc(playtype: playtype, lottype: lottype)) { (result) in
+            switch result {
+            case let .success(response):
+                do {
+                    let filtResponse = try response.filterSuccessfulStatusCodes()
+                    
+                    let resultModel = filtResponse.mapModel(CPPreCalcListModel.self)
+                    self.resultModel = resultModel
+                    self.headerView.kaijiangNum = self.resultModel?.kjnum
+                    self.headerView.serialLabel?.text = "\(self.resultModel?.kjissue ?? "")期"
+                    self.tableView.reloadData()
+//                    NSLog("\(result.list)")
+                }catch{
+                    debugPrint("request error")
+                }
+            case let .failure(error):
+                print("请求失败"+error.localizedDescription)
+            }
+        }
     }
-    */
-
 }

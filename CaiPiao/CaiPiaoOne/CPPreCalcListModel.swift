@@ -10,6 +10,8 @@ import HandyJSON
 
 class CPPreCalcListModel: CPBaseModel {
     var list: [CPPreCalcModel] = []
+    var kjnum: String = ""
+    var kjissue: String = ""
 }
 /*
  "calcid": "17404432",
@@ -43,5 +45,7 @@ struct CPPreCalcModel: HandyJSON {
     var playname:String = ""
     var playtype:Int = 0
     var award:String = ""
+    var viewnum:Int = 0
+    var calc:String = ""
     
 }

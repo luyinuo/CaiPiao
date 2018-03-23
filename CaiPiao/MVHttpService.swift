@@ -14,6 +14,7 @@ import SwiftyJSON
 
 
 enum MVHttpService {
+    case getZiXun(lottype:Int)
     case getPrecalc(playtype:Int,lottype:Int)
     case getChannelsByArea
     case getLiveChannelsByChannel(channel:Int)
@@ -36,6 +37,8 @@ enum MVHttpService {
 extension MVHttpService: TargetType {
     var task: Task {
         switch self {
+        case .getZiXun(let lottype):
+            return .requestParameters(parameters: ["lottype" : lottype], encoding: URLEncoding.queryString)
         case .getPrecalc(let playtype, let lottype):
             return .requestParameters(parameters: ["playtype" : playtype,"lottype":lottype,"lastid":"-1"], encoding: URLEncoding.queryString)
         default:
@@ -59,12 +62,14 @@ extension MVHttpService: TargetType {
         case .getValidateCodeOnRegister,.checkValidateCode,.login,.register,.saveUserInfo,.updatePwd,.getValidateCodeOnModifyPwd:
             return URL(string: "http://screenshare.otvcloud.com/")!
         default:
-            return URL(string: "http://liveclips.otvcloud.com/php/")!
+            return URL(string: "http://115.29.175.83/cpyc/")!
         }
         
     }
     var path: String {
         switch self {
+        case .getZiXun:
+            return "zjnews.php"
         case .getPrecalc:
             return "getprecalc.php"
         case .getChannelsByArea:
@@ -110,6 +115,8 @@ extension MVHttpService: TargetType {
     }
     var parameters: [String: Any]? {
         switch self {
+        case .getZiXun(let lottype):
+            return ["lottype":lottype]
         case .getPrecalc(let playtype, let lottype):
             return ["playtype":playtype,"lottype":lottype,"lastid":-1]
         case .getChannelsByArea:

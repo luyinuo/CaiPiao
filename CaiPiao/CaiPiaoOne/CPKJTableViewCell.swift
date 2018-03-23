@@ -14,6 +14,21 @@ class CPKJTableViewCell: UITableViewCell {
     @IBOutlet weak var serialLabel:UILabel!
     @IBOutlet weak var centerView:UIView!
     @IBOutlet weak var readCountLabel: UILabel!
+    @IBOutlet weak var calcLable: UILabel!
+    var model:CPPreCalcModel? {
+        didSet {
+            name.text = model?.username
+            roleLabel.text = "专家"
+            serialLabel.text = model?.hitnum
+            readCountLabel.text = "\(model?.viewnum ?? 0)"
+            let calcs = model?.calc.components(separatedBy: ",") ?? []
+            var calcStr = ""
+            for num in calcs {
+                calcStr.append(" \(num)")
+            }
+            calcLable.text = calcStr
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
