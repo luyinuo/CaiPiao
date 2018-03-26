@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let delayTime : TimeInterval = 1.5
+let delayTime : TimeInterval = 1.5
 private let padding : CGFloat = 12
 private let cornerRadius : CGFloat = 13.0
 private let imageWidth_Height : CGFloat = 36
@@ -203,7 +203,7 @@ public class JJHUD:UIView {
         })
     }
 
-    public func hide(delay:TimeInterval = delayTime) {
+    public func hide(delay:TimeInterval) {
         JJHUD.asyncAfter(duration: delay) {
             self.hide()
         }
@@ -222,7 +222,7 @@ public class JJHUD:UIView {
         }
     }
 
-    public static func hide(delay:TimeInterval = delayTime) {
+    public static func hide(delay:TimeInterval) {
         asyncAfter(duration: delay) {
             hide()
         }
@@ -255,16 +255,16 @@ extension String {
         var textSize:CGSize!
         if size.equalTo(CGSize.zero) {
             let attributes = NSDictionary(object: font,
-                                          forKey: NSFontAttributeName as NSCopying)
-            textSize = self.size(attributes: attributes as? [String : AnyObject])
+                                          forKey: NSAttributedStringKey.font as NSCopying)
+            textSize = self.size(withAttributes: attributes as? [NSAttributedStringKey:Any])
         } else {
             let option = NSStringDrawingOptions.usesLineFragmentOrigin
             let attributes = NSDictionary(object: font,
-                                          forKey: NSFontAttributeName as NSCopying)
+                                          forKey: NSAttributedStringKey.font as NSCopying)
 
             let stringRect = self.boundingRect(with: size,
                                                options: option,
-                                               attributes: attributes as? [String : AnyObject],
+                                               attributes: attributes as? [NSAttributedStringKey : AnyObject],
                                                context: nil)
             textSize = stringRect.size
         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 #if Environment_Mode
 let SERVER_URL = "http://dev.server.com/api/"
 let API_TOKEN = "DI2023409jf90ew"
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Bmob.register(withAppKey: "447040b88320e1d3495d2f826c0bf33e")
+        
         return true
     }
 

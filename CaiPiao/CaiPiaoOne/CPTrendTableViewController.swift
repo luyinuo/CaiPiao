@@ -54,6 +54,7 @@ class CPTrendTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentify", for: indexPath)
         cell.textLabel?.text = (self.dataSource[indexPath.row] as [String])[0]
+        cell.textLabel?.textColor = UIColor.darkGray
         // Configure the cell...
 
         return cell

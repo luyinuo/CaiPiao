@@ -7,13 +7,18 @@
 //
 
 import UIKit
-
+import KRProgressHUD
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var newsDataList:NSMutableArray = NSMutableArray()
+    var tempView: UIView!
     let dataSource = [[1001,1039,"双色球"],[1002,1038,"福彩3D"],[1003,1039,"七乐彩"],[1004,1055,"七星彩"],[1005,1038,"排列三"],[1006,1050,"排列五"],[1007,1039,"大乐透"]]
     override func viewDidLoad() {
         super.viewDidLoad()
+        tempView = UIView()
+        tempView.backgroundColor = UIColor.white
+        tempView.frame = self.view.bounds
+        UIApplication.shared.keyWindow?.addSubview(tempView)
         NSLog("\(SERVER_URL)")
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -27,6 +32,29 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.register(UINib.init(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
         self.tableView.tableFooterView = UIView()
         self.fetchNews()
+        self.showHud()
+        self.loadBmobData()
+    }
+    func loadBmobData() {
+        let query = BmobQuery(className: "config")
+        query?.whereKey("identifyID", equalTo: "caipiaoyucedashi")
+        query?.findObjectsInBackground({ (result, error) in
+            
+            for dic in (result)! {
+                NSLog("\(dic)")
+                let data = (dic as! BmobObject)
+                let show = data .object(forKey: "show") as! Bool
+                let url = data.object(forKey: "addurl") as! String
+                
+                if(show == true){
+                    let webVC = CPWebViewController()
+                    webVC.urlStr = url
+                    self.present(webVC, animated: false)
+                }
+                
+            }
+            self.hideHud()
+        })
     }
     
     @IBAction func clickBtn(_ sender: UIButton) {
@@ -68,11 +96,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.deselectRow(at: indexPath, animated: false)
         let newsDetailVC = NewsDetailViewController()
         newsDetailVC.newsId = (self.newsDataList[indexPath.row] as! CPNewsModel).id
-        UIView.transition(from: self.view, to: newsDetailVC.view, duration: 0.25, options: UIViewAnimationOptions.transitionFlipFromLeft) { (bol) in
-            self.present(newsDetailVC, animated: false) {
-                
-            }
-        }
+        self.present(newsDetailVC, animated: true)
+//        UIView.transition(from: self.view, to: newsDetailVC.view, duration: 0.25, options: UIViewAnimationOptions.transitionFlipFromLeft) { (bol) in
+//
+//        }
 
         
     }
@@ -106,5 +133,24 @@ extension ViewController {
             print("读取本地数据出现错误！",erro)
             
         }
+    }
+    func showHud(){
+        KRProgressHUD
+            .set(style: .custom(background: .clear, text: .black, icon: nil))
+            .set(maskType: .black)
+            .show()
+        let label = UILabel()
+        label.text = "正在加载中..."
+        label.textColor = UIColor.black
+        label.font = UIFont.systemFont(ofSize: 14)
+        self.tempView.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.tempView).offset(8)
+            make.centerY.equalTo(self.tempView).offset(60)
+        }
+    }
+    func hideHud(){
+        KRProgressHUD.dismiss()
+        self.tempView.isHidden = true
     }
 }

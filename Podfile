@@ -11,6 +11,8 @@ use_frameworks!
    pod 'HandyJSON', '~> 4.0.0-beta.1'
    pod 'Moya/RxSwift', '~> 10.0.0'
    pod 'ObjectMapper'
+   pod 'BmobSDK'
+   pod 'KRProgressHUD'
 end
 
 target 'CaiPiao-Two' do
