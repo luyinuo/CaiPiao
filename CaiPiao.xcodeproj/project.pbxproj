@@ -687,8 +687,8 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyn.CaiPiaoOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "aa511731-9133-4a7d-bcf9-bd442b927984";
-				PROVISIONING_PROFILE_SPECIFIER = com.lyn.caipiaoone.ad_hoc;
+				PROVISIONING_PROFILE = "e0b30114-fcf5-4ac8-ad31-a4e7049fcade";
+				PROVISIONING_PROFILE_SPECIFIER = com.lyn.caipiaoone.distribution;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Environment_Mode;
 				SWIFT_OBJC_BRIDGING_HEADER = "CaiPiao-One-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -715,8 +715,8 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyn.CaiPiaoOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "aa511731-9133-4a7d-bcf9-bd442b927984";
-				PROVISIONING_PROFILE_SPECIFIER = com.lyn.caipiaoone.ad_hoc;
+				PROVISIONING_PROFILE = "e0b30114-fcf5-4ac8-ad31-a4e7049fcade";
+				PROVISIONING_PROFILE_SPECIFIER = com.lyn.caipiaoone.distribution;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Environment_Mode;
 				SWIFT_OBJC_BRIDGING_HEADER = "CaiPiao-One-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
