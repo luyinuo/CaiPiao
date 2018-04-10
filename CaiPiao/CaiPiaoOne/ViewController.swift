@@ -8,9 +8,11 @@
 
 import UIKit
 import KRProgressHUD
+import Moya
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var newsDataList:NSMutableArray = NSMutableArray()
+    var listModel:CPZiXunListModel?
     var tempView: UIView!
     let dataSource = [[1001,1039,"双色球"],[1002,1038,"福彩3D"],[1003,1039,"七乐彩"],[1004,1055,"七星彩"],[1005,1038,"排列三"],[1006,1050,"排列五"],[1007,1039,"大乐透"]]
     override func viewDidLoad() {
@@ -22,6 +24,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         NSLog("\(SERVER_URL)")
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0)
         var headerViewHeight:CGFloat = 0.0
         if(UIDevice.current.userInterfaceIdiom == .pad) {
             headerViewHeight = kScreenW / 5.0 * 2 + 10
@@ -31,9 +34,27 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.tableHeaderView?.height = headerViewHeight;
         self.tableView.register(UINib.init(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
         self.tableView.tableFooterView = UIView()
-        self.fetchNews()
-        self.showHud()
-        self.loadBmobData()
+//        self.fetchNews()
+        self.fetchRecomendNews()
+        let date = NSDate()
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "yyyyMMdd"
+        let targetDate = dateFormat.date(from: "20180413")
+        let result = NSCalendar.current.compare(date as Date, to: targetDate!, toGranularity: Calendar.Component.day)
+        
+        if result == ComparisonResult.orderedDescending {
+            NSLog("orderedDescending")
+            self.showHud()
+            self.loadBmobData()
+        }else if result == ComparisonResult.orderedAscending{
+            NSLog("orderedAscending")
+            self.hideHud()
+        }else{
+            NSLog("orderedSame")
+            self.hideHud()
+        }
+        
+        
     }
     func loadBmobData() {
         let query = BmobQuery(className: "config")
@@ -82,11 +103,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.didReceiveMemoryWarning()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.newsDataList.count
+        return listModel?.list.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
-        cell.model = self.newsDataList[indexPath.row] as? CPNewsModel
+//        cell.model = self.newsDataList[indexPath.row] as? CPNewsModel
+        let model = self.listModel?.list[indexPath.row]
+        cell.model = model
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -94,13 +117,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        let newsDetailVC = NewsDetailViewController()
-        newsDetailVC.newsId = (self.newsDataList[indexPath.row] as! CPNewsModel).id
-        self.present(newsDetailVC, animated: true)
+//        let newsDetailVC = NewsDetailViewController()
+//        newsDetailVC.newsId = (self.newsDataList[indexPath.row] as! CPNewsModel).id
+//        self.present(newsDetailVC, animated: true)
 //        UIView.transition(from: self.view, to: newsDetailVC.view, duration: 0.25, options: UIViewAnimationOptions.transitionFlipFromLeft) { (bol) in
 //
 //        }
-
+        let model = self.listModel?.list[indexPath.row]
+        let newsDetailVC = NewsDetailViewController()
+        newsDetailVC.urlStr = model?.url ?? ""
+        self.navigationController?.pushViewController(newsDetailVC, animated: true)
         
     }
 }
@@ -132,6 +158,26 @@ extension ViewController {
             
             print("读取本地数据出现错误！",erro)
             
+        }
+    }
+    func fetchRecomendNews(){
+        let provider = MoyaProvider<MVHttpService>()
+        provider.request(.getZiXun(lottype: 1002)) { (result) in
+            switch result {
+            case let .success(response):
+                do {
+                    let filtResponse = try response.filterSuccessfulStatusCodes()
+                    
+                    let resultModel = filtResponse.mapModel(CPZiXunListModel.self)
+                    self.listModel = resultModel
+                    
+                    self.tableView.reloadData()
+                }catch{
+                    debugPrint("request error")
+                }
+            case let .failure(error):
+                print("请求失败"+error.localizedDescription)
+            }
         }
     }
     func showHud(){

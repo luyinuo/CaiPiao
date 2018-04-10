@@ -13,6 +13,8 @@ use_frameworks!
    pod 'ObjectMapper'
    pod 'BmobSDK'
    pod 'KRProgressHUD'
+   pod 'UMCCommon'
+   pod 'UMCPush'
 end
 
 target 'CaiPiao-Two' do

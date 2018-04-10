@@ -33,7 +33,7 @@
             </objects>
             <point key="canvasLocation" x="-1423" y="100"/>
         </scene>
-        <!--预测大师-->
+        <!--超级预测师-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CaiPiao_One" customModuleProvider="target" sceneMemberID="viewController">
@@ -586,7 +586,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="预测大师" id="lrB-9M-9ob"/>
+                    <navigationItem key="navigationItem" title="超级预测师" id="lrB-9M-9ob"/>
                     <connections>
                         <outlet property="tableView" destination="afu-S9-3oL" id="buY-aP-hON"/>
                         <segue destination="UnO-PD-vDm" kind="show" identifier="detailIdentify" id="1lj-vZ-VG6"/>

@@ -3,4 +3,5 @@
 //
 
 #import <BmobSDK/Bmob.h>
-
+#import <UMCommon/UMCommon.h>
+#import <UMPush/UMessage.h>
